@@ -1,33 +1,23 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\AdminController;
+use App\Http\Controllers\ProfileController;
 
-// Public routes
 Route::get('/', function () {
-    return view('home');
-})->name('home');
+    return view('welcome');
+});
 
-Route::get('/exp', function () {
-    return view('exp'); 
-})->name('exp');
+// Protect dashboard route with authentication middleware
+Route::middleware(['auth'])->group(function () {
+    Route::get('/dashboard', function () {
+        return view('dashboard');
+    })->name('dashboard');
 
-Route::get('/about-me', function () {
-    return view('about'); 
-})->name('about');
+    // Profile Routes
+    Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
+    Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
+    Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
+});
 
-Route::get('/projects', function () {
-    return view('projects');
-})->name('projects');
-
-
-Route::get('/admin/login', [AdminController::class, 'loginForm'])->name('admin.login.form');
-Route::post('/admin/login', [AdminController::class, 'login'])->name('admin.login');
-
-
-Route::post('/admin/logout', [AdminController::class, 'logout'])->name('admin.logout');
-
-
-Route::get('/admin', [AdminController::class, 'index'])
-    ->name('admin.dashboard')
-    ->middleware('admin.auth');
+// Include authentication routes
+require __DIR__.'/auth.php';
