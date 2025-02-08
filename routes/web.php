@@ -7,6 +7,19 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('/projects', function () {
+    return view('projects');
+})->name('projects');
+
+Route::get('/exp', function () {
+    return view('exp');
+})->name('exp');
+
+Route::get('/about-me', function () {
+    return view('about-me');
+})->name('about-me');
+
+
 // Protect dashboard route with authentication middleware
 Route::middleware(['auth'])->group(function () {
     Route::get('/dashboard', function () {
