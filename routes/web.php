@@ -7,17 +7,8 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/projects', function () {
-    return view('projects');
-})->name('projects');
-
-Route::get('/exp', function () {
-    return view('exp');
-})->name('exp');
-
-Route::get('/about-me', function () {
-    return view('about-me');
-})->name('about-me');
+// removed all rotues for clean up 
+// will add later accordingly and manageable content now things are gone out of hand for now will consider doing it first 
 
 
 // Protect dashboard route with authentication middleware
