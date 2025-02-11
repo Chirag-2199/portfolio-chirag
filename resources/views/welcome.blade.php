@@ -192,10 +192,9 @@
     </nav>
 
     <div class="container">
-        <h1>Transform Your Digital Experience</h1>
+        <h1>Software developer</h1>
         <p class="hero-text">
-            Welcome to NextGen - Where innovation meets simplicity. 
-            Empower your workflow with our cutting-edge Laravel-powered platform.
+            Welcome to my portfolio website. I am a full-stack developer with a passion for building amazing products.
         </p>
 
         <div class="cta-buttons">
