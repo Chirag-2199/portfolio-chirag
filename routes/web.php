@@ -4,12 +4,20 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ProfileController;
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('home');
 });
 
-// removed all rotues for clean up
-// will add later accordingly and manageable content now things are gone out of hand for now will consider doing it first
+Route::get('/about', function () {
+    return view('about');
+})->name('about');
 
+Route::get('/experience', function () {
+    return view('experience');
+})->name('experience');
+
+Route::get('/projects', function () {
+    return view('projects');
+})->name('projects');
 
 // Protect dashboard route with authentication middleware
 Route::middleware(['auth'])->group(function () {
