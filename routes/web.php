@@ -11,8 +11,8 @@ Route::get('/about', function () {
     return view('about');
 })->name('about');
 
-Route::get('/experience', function () {
-    return view('experience');
+Route::get('/exp', function () {
+    return view('exp');
 })->name('experience');
 
 Route::get('/projects', function () {
