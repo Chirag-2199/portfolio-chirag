@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Experience - Chirag</title>
+    <title>About - NextGen App</title>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <style>
         :root {
@@ -62,20 +62,19 @@
             background: linear-gradient(to right, #fff, #ffd700);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
-            text-align: center;
         }
 
-        .experience-list {
-            list-style: none;
-            padding: 0;
-            margin-top: 2rem;
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 4rem;
         }
 
-        .experience-item {
+        .feature-card {
             padding: 2rem;
             background: rgba(255, 255, 255, 0.05);
             border-radius: 15px;
-            margin-bottom: 1.5rem;
         }
 
         footer {
@@ -98,25 +97,32 @@
     </nav>
 
     <div class="container">
-        <h1>Experience</h1>
-        <ul class="experience-list">
-            <li class="experience-item">
-                <h3>Software Development Intern</h3>
-                <p>Cactus Communications</p>
-                <p>September 2024 - Present</p>
-                <p>Joined Cactus as a software developer intern. Joined Editage's Platform Engineering team and also worked in production support.</p>
-            </li>
-            <li class="experience-item">
-                <h3>FrontEnd Developer Intern</h3>
-                <p>VerveBridge</p>
-                <p>June 2024 - July 2024</p>
-                <p>Worked individually on frontend projects and completed all of them with a SER of 9.7/10. Optimized the main website using Next.js, worked on the Upgrade Website project.</p>
-            </li>
-        </ul>
+        <h1>About Me</h1>
+        <p class="hero-text">
+            I am Chirag, a passionate software developer with expertise in modern web technologies. I specialize in creating dynamic, user-friendly applications with a focus on performance and security.
+        </p>
+
+        <div class="features">
+            <div class="feature-card">
+                <i class="fas fa-code feature-icon"></i>
+                <h3 class="feature-title">Full-Stack Development</h3>
+                <p class="feature-text">Skilled in frontend and backend technologies, including React.js, Laravel, and Node.js.</p>
+            </div>
+            <div class="feature-card">
+                <i class="fas fa-lightbulb feature-icon"></i>
+                <h3 class="feature-title">Innovative Solutions</h3>
+                <p class="feature-text">Building scalable, efficient applications tailored to user needs.</p>
+            </div>
+            <div class="feature-card">
+                <i class="fas fa-users feature-icon"></i>
+                <h3 class="feature-title">Collaboration</h3>
+                <p class="feature-text">Working with teams to create seamless and engaging digital experiences.</p>
+            </div>
+        </div>
     </div>
 
     <footer>
-        <p>© 2023 Chirag. Crafted with <i class="fas fa-heart"></i> for the web</p>
+        <p>© 2023 NextGen. Crafted with <i class="fas fa-heart"></i> for the web</p>
     </footer>
 </body>
 </html>
