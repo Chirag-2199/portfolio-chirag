@@ -56,6 +56,34 @@
             transform: scale(1.05);
         }
 
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            align-items: center;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 1.1rem;
+            padding: 0.5rem 1rem;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+            opacity: 0.9;
+        }
+
+        .nav-links a:hover {
+            background: rgba(255, 255, 255, 0.1);
+            transform: translateY(-2px);
+            opacity: 1;
+        }
+
+        .auth-links {
+            display: flex;
+            gap: 1rem;
+        }
+
         .container {
             position: relative;
             max-width: 1200px;
@@ -180,19 +208,32 @@
             .features {
                 grid-template-columns: 1fr;
             }
+
+            .nav-links {
+                display: none;
+            }
+
+            .auth-links {
+                margin-left: auto;
+            }
         }
     </style>
 </head>
 <body>
     <nav class="nav">
-        <a href="#" class="logo">Chirag</a>
+        <a href="/" class="logo">Chirag</a>
+        <div class="nav-links">
+            <a href="/about">About</a>
+            <a href="/exp">Experience</a>
+            <a href="/projects">Projects</a>
+        </div>
         <div class="auth-links">
             <a href="{{ route('login') }}" class="btn btn-secondary">Sign In</a>
         </div>
     </nav>
 
     <div class="container">
-        <h1>Software developer</h1>
+        <h1>Software Developer</h1>
         <p class="hero-text">
             Welcome to my portfolio website. I am a full-stack developer with a passion for building amazing products.
         </p>
