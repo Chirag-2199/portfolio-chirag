@@ -18,6 +18,7 @@ Route::get('/exp', function () {
 Route::get('/projects', function () {
     return view('projects');
 })->name('projects');
+// tesing for atalsian automation 
 
 // Protect dashboard route with authentication middleware
 Route::middleware(['auth'])->group(function () {
