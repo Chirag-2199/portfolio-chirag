@@ -3,6 +3,8 @@
 namespace App\Http;
 
 use Illuminate\Foundation\Http\Kernel as HttpKernel;
+use App\Console\Commands\AddDataToWbUser;
+
 
 class Kernel extends HttpKernel
 {
@@ -55,4 +57,8 @@ class Kernel extends HttpKernel
         // ... other middleware you might have
         'admin.auth' => \App\Http\Middleware\AdminAuth::class,
     ];
+    protected $commands = [
+        \App\Console\Commands\AddDataToTable::class,
+    ];
+    
 }
