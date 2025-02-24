@@ -19,7 +19,6 @@ Route::get('/projects', function () {
     return view('projects');
 })->name('projects');
 
-// Protect dashboard route with authentication middleware
 Route::middleware(['auth'])->group(function () {
     Route::get('/dashboard', function () {
         return view('dashboard');
