@@ -20,7 +20,6 @@ Route::get('/projects', function () {
 })->name('projects');
 // tesing for atalsian automation 
 
-// Protect dashboard route with authentication middleware
 Route::middleware(['auth'])->group(function () {
     Route::get('/dashboard', function () {
         return view('dashboard');
